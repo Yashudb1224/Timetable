@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated Timetable</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        body {
+        body {background-image: url('https://i.pinimg.com/originals/8d/b2/59/8db259720d98e98b667c35e87b803100.gif');
+            background-repeat:no-repeat;
+            background-size:cover;
             background-color: #0f0f0f; /* Dark background */
             color: #ffffff; /* White text */
             font-family: 'Arial', sans-serif;
@@ -44,10 +47,9 @@
         .break {
             background-color: #5a2020; /* Dark red */
         }
-    </style>
-</head>
+    </style> 
 <body>
-    <h1>Generated Timetable</h1>
+<h1>Generated Timetable</h1>
     <div class="timetable-container">
         {% autoescape false %}
             {{ timetable_html|safe }}

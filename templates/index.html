@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
+            background-image: url('https://i.redd.it/tur6ijxc9ev71.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
             background-color: #0f0f0f; /* Dark background */
             color: #ffffff; /* White text */
             font-family: 'Arial', sans-serif;
@@ -32,8 +36,7 @@
             margin-bottom: 10px;
             font-size: 18px;
         }
-        input[type="number"],
-        input[type="time"] {
+        select, input[type="number"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -42,8 +45,7 @@
             background-color: #333;
             color: #ffffff;
         }
-        button[type="button"],
-        button[type="submit"] {
+        button[type="button"], button[type="submit"] {
             width: 100%;
             padding: 10px;
             border: none;
@@ -70,11 +72,29 @@
             <label for="start_time">Start Time:</label>
             <input type="time" id="start_time" name="start_time" required><br><br>
 
-            <div id="subjects">
-                <!-- Input fields for subject name and difficulty level will be dynamically added here -->
-            </div>
+            <label for="subject">Select Subject:</label>
+            <select id="subject" name="subject">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="French">French</option>
+                <option value="Sanskrit">Sanskrit</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+                <option value="Civics">Civics</option>
+                <option value="Economics">Economics</option>
+                <option value="Mathematics">Mathematics</option>
+            </select><br><br>
+
+            <label for="difficulty">Difficulty Level (1-10):</label>
+            <input type="number" id="difficulty" name="difficulty" required min="1" max="10"><br><br>
 
             <button type="button" onclick="addSubject()">Add Subject</button><br><br>
+
+            <div id="subjects">
+                <!-- Newly added subjects will be displayed here -->
+            </div>
+
+            <p id="add-more-message" style="display: none;">Please add the next subject.</p>
 
             <button type="submit">Generate Timetable</button>
         </form>
@@ -86,29 +106,37 @@
 
             var subjectIndex = div.children.length / 3 + 1;
 
-            var labelName = document.createElement("label");
-            labelName.textContent = "Subject Name:";
-            div.appendChild(labelName);
+            var subjectDropdown = document.getElementById("subject");
+            var subjectName = subjectDropdown.value;
+            var difficulty = document.getElementById("difficulty").value;
 
-            var inputName = document.createElement("input");
-            inputName.type = "text";
-            inputName.name = "subject_name_" + subjectIndex;
-            inputName.required = true;
-            div.appendChild(inputName);
-            div.appendChild(document.createElement("br"));
+            // Check if the subject already exists in the list
+            if (div.innerHTML.includes(subjectName)) {
+                alert("Subject already added.");
+                return;
+            }
 
-            var labelDifficulty = document.createElement("label");
-            labelDifficulty.textContent = "Difficulty Level (1-10):";
-            div.appendChild(labelDifficulty);
+            var subjectDiv = document.createElement("div");
+            subjectDiv.textContent = subjectName + " (Difficulty: " + difficulty + ")";
+            div.appendChild(subjectDiv);
 
-            var inputDifficulty = document.createElement("input");
-            inputDifficulty.type = "number";
-            inputDifficulty.name = "difficulty_" + subjectIndex;
-            inputDifficulty.required = true;
-            inputDifficulty.min = 1;
-            inputDifficulty.max = 10;
-            div.appendChild(inputDifficulty);
-            div.appendChild(document.createElement("br"));
+            var hiddenInputName = document.createElement("input");
+            hiddenInputName.type = "hidden";
+            hiddenInputName.name = "subject_name_" + subjectIndex;
+            hiddenInputName.value = subjectName;
+            div.appendChild(hiddenInputName);
+
+            var hiddenInputDifficulty = document.createElement("input");
+            hiddenInputDifficulty.type = "hidden";
+            hiddenInputDifficulty.name = "difficulty_" + subjectIndex;
+            hiddenInputDifficulty.value = difficulty;
+            div.appendChild(hiddenInputDifficulty);
+
+            var br = document.createElement("br");
+            div.appendChild(br);
+
+            var addMoreMessage = document.getElementById("add-more-message");
+            addMoreMessage.style.display = "block";
         }
     </script>
 </body>
