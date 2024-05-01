@@ -24,7 +24,7 @@ def generate_timetable(subjects, total_study_hours, start_time):
 
     timetable = []
     current_time = start_time
-    for subject, difficulty in subjects:
+    for i, (subject, difficulty) in enumerate(subjects):
         study_hours = calculate_study_time(total_study_hours, total_difficulty, difficulty)
         break_duration = calculate_break_duration(difficulty)
 
@@ -32,9 +32,10 @@ def generate_timetable(subjects, total_study_hours, start_time):
         timetable.append([subject, current_time.strftime("%I:%M %p"), (current_time + timedelta(hours=study_hours)).strftime("%I:%M %p")])
         current_time += timedelta(hours=study_hours)
 
-        # Add break after the subject
-        timetable.append(["Break", current_time.strftime("%I:%M %p"), (current_time + timedelta(minutes=break_duration)).strftime("%I:%M %p")])
-        current_time += timedelta(minutes=break_duration)
+        # Add break after the subject, except for the last one
+        if i < len(subjects) - 1:
+            timetable.append(["Break", current_time.strftime("%I:%M %p"), (current_time + timedelta(minutes=break_duration)).strftime("%I:%M %p")])
+            current_time += timedelta(minutes=break_duration)
 
     return timetable
 
@@ -63,6 +64,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-#This is to show how to collaboarate on varun

@@ -6,11 +6,26 @@
     <title>Generated Timetable</title>
     <style>
         body {
-            background-color: #161616; /* Dark grey */
+            background-color: #0f0f0f; /* Dark background */
             color: #ffffff; /* White text */
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: #f9a602; /* Yellow */
+        }
+        .timetable-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f; /* Dark grey */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
         table {
             border-collapse: collapse;
@@ -29,19 +44,14 @@
         .break {
             background-color: #5a2020; /* Dark red */
         }
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
     </style>
 </head>
 <body>
     <h1>Generated Timetable</h1>
-    <hr>
-    {% autoescape false %}
-        {{ timetable_html|safe }}
-    {% endautoescape %}
+    <div class="timetable-container">
+        {% autoescape false %}
+            {{ timetable_html|safe }}
+        {% endautoescape %}
+    </div>
 </body>
 </html>
