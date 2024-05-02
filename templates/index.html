@@ -76,29 +76,31 @@
             <label for="start_time">Start Time:</label>
             <input type="time" id="start_time" name="start_time" required><br><br>
 
+            <p style="color: #f4ba0b;">Add the subjects in the order you want to study them.</p><br>
+
             <label for="subject">Select Subject:</label>
             <select id="subject" name="subject">
-                <option value="Accountancy">Accountancy</option>
-                <option value="Biology">Biology</option>
-                <option value="Business Studies">Business Studies</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Computer Science">Computer Science</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="French">French</option>
+                <option value="Sanskrit">Sanskrit</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
                 <option value="Civics">Civics</option>
                 <option value="Economics">Economics</option>
-                <option value="Entrepreneurship">Entrepreneurship</option>
-                <option value="French">French</option>
-                <option value="Geography">Geography</option>
-                <option value="German">German</option>
-                <option value="Hindi">Hindi</option>
-                <option value="History">History</option>
-                <option value="Kannada">Kannada</option>
-                <option value="Legal Studies">Legal Studies</option>
                 <option value="Mathematics">Mathematics</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Kannada">Kannada</option>
+                <option value="German">German</option>
                 <option value="Physical Education">Physical Education</option>
+                <option value="Accountancy">Accountancy</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="Legal Studies">Legal Studies</option>
+                <option value="Chemistry">Chemistry</option>
                 <option value="Physics">Physics</option>
+                <option value="Biology">Biology</option>
+                <option value="Entrepreneurship">Entrepreneurship</option>
                 <option value="Psychology">Psychology</option>
-                <option value="Sanskrit">Sanskrit</option>
-                <option value="Social Science">Social Science</option>
             </select><br><br>
 
             <label for="difficulty">Difficulty Level (1-10):</label>
@@ -126,13 +128,7 @@
             var subjectName = subjectDropdown.value;
             var difficulty = document.getElementById("difficulty").value;
 
-            // Check if the subject already exists in the list
-            if (div.innerHTML.includes(subjectName)) {
-                alert("Subject already added.");
-                return;
-            }
-
-            // Check if difficulty is provided
+            // Validate difficulty input
             if (difficulty === "" || difficulty === "0") {
                 alert("Please enter a valid difficulty level.");
                 return;

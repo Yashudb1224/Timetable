@@ -51,7 +51,7 @@ def index():
                 subject_index = key.split('_')[-1]
                 subject_name = value
                 difficulty = request.form.get(f'difficulty_{subject_index}', '')
-                if difficulty and subject_name:  # Ensure both subject name and difficulty are provided
+                if difficulty:  # Ensure difficulty is provided
                     subjects.append((subject_name, difficulty))
 
         timetable = generate_timetable(subjects, total_study_hours, start_time)
