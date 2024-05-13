@@ -62,5 +62,43 @@ def index():
         return render_template('timetable.html', timetable_html=timetable_html)
     return render_template('index.html')
 
+import time
+from threading import Thread
+
+# Pomodoro timer function
+def pomodoro_timer():
+    # Initial settings for Pomodoro timer (in seconds)
+    pomodoro_duration = 25 * 60  # 25 minutes
+    break_duration = 5 * 60      # 5 minutes
+
+    while True:
+        # Pomodoro timer
+        time.sleep(pomodoro_duration)
+        print("Pomodoro finished!")
+
+        # Break timer
+        time.sleep(break_duration)
+        print("Break finished!")
+
+# Start Pomodoro timer in a separate thread
+pomodoro_thread = Thread(target=pomodoro_timer)
+pomodoro_thread.daemon = True  # Daemonize the thread so it automatically stops on exit
+pomodoro_thread.start()
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+import random
+
+# List of motivational quotes
+motivational_quotes = [
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt"
+]
+
+
+def quotes():
+    return random.choice(motivational_quotes)

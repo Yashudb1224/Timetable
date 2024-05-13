@@ -27,16 +27,14 @@
             max-width: 500px;
             margin: auto;
             padding: 20px;
-            background-color: #1f1f1f; /* Dark grey */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
         label {
             display: block;
             margin-bottom: 10px;
             font-size: 18px;
         }
-        select, input[type="number"] {
+        select, input[type="number"], input[type="text"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -76,10 +74,10 @@
             <label for="start_time">Start Time:</label>
             <input type="time" id="start_time" name="start_time" required><br><br>
 
-            <p style="color: #f4ba0b;">Arrange the subjects based on your preferred order of study, and if you're planning to revisit a subject multiple times, ensure you maintain consistency in its difficulty level across instances.</p><br>
+            <p style="color: #FFFFFF;">Arrange the subjects based on your preferred order of study, and if you're planning to revisit a subject multiple times, ensure you maintain consistency in its difficulty level across instances.</p><br>
 
             <label for="subject">Select Subject:</label>
-            <select id="subject" name="subject">
+            <select id="subject" name="subject" onchange="showCustomInput()">
                 <option value="English">English</option>
                 <option value="Hindi">Hindi</option>
                 <option value="French">French</option>
@@ -101,7 +99,15 @@
                 <option value="Biology">Biology</option>
                 <option value="Entrepreneurship">Entrepreneurship</option>
                 <option value="Psychology">Psychology</option>
+                
+                <!-- Other options... -->
+                <option value="Other">Other (Type Your Own)</option>
             </select><br><br>
+
+            <div id="custom-subject" style="display: none;">
+                <label for="custom_subject">Custom Subject:</label>
+                <input type="text" id="custom_subject" name="custom_subject"><br><br>
+            </div>
 
             <label for="difficulty">Difficulty Level (1-10):</label>
             <input type="number" id="difficulty" name="difficulty" required min="1" max="10"><br><br>
@@ -119,13 +125,37 @@
     </div>
 
     <script>
+        function showCustomInput() {
+            var subjectDropdown = document.getElementById("subject");
+            var customSubjectInput = document.getElementById("custom-subject");
+
+            if (subjectDropdown.value === "Other") {
+                customSubjectInput.style.display = "block";
+            } else {
+                customSubjectInput.style.display = "none";
+            }
+        }
+
         function addSubject() {
             var div = document.getElementById("subjects");
 
             var subjectIndex = div.children.length / 4 + 1;
 
             var subjectDropdown = document.getElementById("subject");
-            var subjectName = subjectDropdown.value;
+            var selectedSubject = subjectDropdown.value;
+            var customSubjectInput = document.getElementById("custom_subject");
+
+            var subjectName;
+            if (selectedSubject === "Other") {
+                subjectName = customSubjectInput.value.trim();
+                if (subjectName === "") {
+                    alert("Please enter a custom subject.");
+                    return;
+                }
+            } else {
+                subjectName = selectedSubject;
+            }
+
             var difficulty = document.getElementById("difficulty").value;
 
             // Validate difficulty input
