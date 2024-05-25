@@ -6,7 +6,8 @@
     <title>Generated Timetable</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        body {background-image: url('https://i.gifer.com/5m5h.gif');
+        body {
+            background-image: url('https://i.gifer.com/5m5h.gif');
             background-repeat:no-repeat;
             background-size:cover;
             background-color: #0f0f0f; /* Dark background */
@@ -85,7 +86,6 @@
             margin: auto;
             padding: 20px;
             border-radius: 10px;
-            
             margin-top: 50px;
             text-align: center;
         }
@@ -97,6 +97,21 @@
         }
         .music-box iframe {
             margin-top: 20px;
+        }
+        .logout-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f44336; /* Red */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-button:hover {
+            background-color: #c0392b; /* Darker red */
         }
     </style> 
 </head>
@@ -129,6 +144,9 @@
         <p>Enjoy some music from Spotify while you study!</p>
         <iframe src="https://open.spotify.com/embed/playlist/3ayOnMTetG8E1c3q9VJmbi" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
+
+    <!-- Logout Button -->
+    <button class="logout-button" onclick="location.href='/logout'">Logout</button>
 
     <!-- JavaScript to update Pomodoro timer -->
     <script>
@@ -173,5 +191,3 @@
     </script>
 </body>
 </html>
-
-
