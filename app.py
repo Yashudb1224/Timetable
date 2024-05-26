@@ -59,16 +59,19 @@ def generate_timetable(subjects, total_study_hours, start_time):
             current_time += timedelta(minutes=break_duration)
     return timetable
 
-def save_timetable_to_csv(timetable, filename='timetables.csv'):
+def save_timetable_to_csv(timetable, username, filename='timetables.csv'):
     with open(filename, 'a', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         for subject, start, end in timetable:
-            csvwriter.writerow([subject, start, end, datetime.now()])
+            csvwriter.writerow([username, subject, start, end, datetime.now()])
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if 'username' not in session:
         return redirect(url_for('login'))
+
+    username = session['username']
+    welcome_message = f"Welcome, {username}!"
 
     if request.method == 'POST':
         subjects = []
@@ -85,14 +88,23 @@ def index():
 
         timetable = generate_timetable(subjects, total_study_hours, start_time)
 
-        # Save to CSV file
-        save_timetable_to_csv(timetable)
+        # Save to CSV file and text file
+        save_timetable_to_csv(timetable, username)
 
         headers = ["Activity", "Start Time", "End Time"]
         timetable_html = tabulate(timetable, headers=headers, tablefmt="html")
+        timetable_txt = tabulate(timetable, headers=headers, tablefmt="plain")
 
-        return render_template('timetable.html', timetable_html=timetable_html)
-    return render_template('index.html')
+        user_id = 1  # Replace with dynamic user ID if needed
+        filename = f'timetable_user_{user_id}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt'
+        filepath = os.path.join('timetables', filename)
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, 'w') as file:
+            file.write(f"Username: {username}\n\n")
+            file.write(timetable_txt)
+
+        return render_template('timetable.html', timetable_html=timetable_html, welcome_message=welcome_message)
+    return render_template('index.html', username=username, welcome_message=welcome_message)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -127,3 +139,5 @@ def logout():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+

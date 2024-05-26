@@ -1,0 +1,8 @@
+Username: Varun
+
+Activity          Start Time    End Time
+English           11:06 PM      12:26 AM
+Break             12:26 AM      12:37 AM
+Entrepreneurship  12:37 AM      01:57 AM
+Break             01:57 AM      02:08 AM
+Haloalkanes       02:08 AM      03:28 AM
