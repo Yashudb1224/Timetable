@@ -1,0 +1,8 @@
+Username: Yash
+
+Activity     Start Time    End Time
+English      10:58 PM      12:06 AM
+Break        12:06 AM      12:17 AM
+Chemistry    12:17 AM      01:43 AM
+Break        01:43 AM      01:55 AM
+Haloalkanes  01:55 AM      03:21 AM

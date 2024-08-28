@@ -1,0 +1,93 @@
+2024-05-24 22:49:59,459 - WARNING -  * Debugger is active!
+2024-05-24 22:49:59,462 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:50:18,568 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:50:18,904 - WARNING -  * Debugger is active!
+2024-05-24 22:50:18,907 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:50:24,938 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:50:25,291 - WARNING -  * Debugger is active!
+2024-05-24 22:50:25,298 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:50:45,412 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:50:45,763 - WARNING -  * Debugger is active!
+2024-05-24 22:50:45,768 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:51:02,869 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:51:03,204 - WARNING -  * Debugger is active!
+2024-05-24 22:51:03,206 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:51:11,249 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:51:11,568 - WARNING -  * Debugger is active!
+2024-05-24 22:51:11,568 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:51:18,608 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:51:18,926 - WARNING -  * Debugger is active!
+2024-05-24 22:51:18,930 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:51:23,953 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:51:24,342 - WARNING -  * Debugger is active!
+2024-05-24 22:51:24,342 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:51:50,728 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-24 22:51:50,728 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-24 22:51:50,728 - INFO -  * Restarting with stat
+2024-05-24 22:51:50,975 - WARNING -  * Debugger is active!
+2024-05-24 22:51:50,977 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:52:09,061 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-24 22:52:09,061 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-24 22:52:09,064 - INFO -  * Restarting with stat
+2024-05-24 22:52:09,419 - WARNING -  * Debugger is active!
+2024-05-24 22:52:09,422 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:52:21,478 - INFO - 127.0.0.1 - - [24/May/2024 22:52:21] "GET / HTTP/1.1" 200 -
+2024-05-24 22:52:22,912 - INFO - 127.0.0.1 - - [24/May/2024 22:52:22] "GET / HTTP/1.1" 200 -
+2024-05-24 22:52:22,931 - INFO - 127.0.0.1 - - [24/May/2024 22:52:22] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:52:23,713 - INFO - 127.0.0.1 - - [24/May/2024 22:52:23] "GET / HTTP/1.1" 200 -
+2024-05-24 22:52:23,729 - INFO - 127.0.0.1 - - [24/May/2024 22:52:23] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:52:23,843 - INFO - 127.0.0.1 - - [24/May/2024 22:52:23] "GET / HTTP/1.1" 200 -
+2024-05-24 22:52:23,860 - INFO - 127.0.0.1 - - [24/May/2024 22:52:23] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:52:24,064 - INFO - 127.0.0.1 - - [24/May/2024 22:52:24] "GET / HTTP/1.1" 200 -
+2024-05-24 22:52:24,081 - INFO - 127.0.0.1 - - [24/May/2024 22:52:24] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:52:39,770 - ERROR - Error saving timetable data to database: 1130 (HY000): Host 'YashLaptop' is not allowed to connect to this MySQL server
+2024-05-24 22:52:39,778 - INFO - 127.0.0.1 - - [24/May/2024 22:52:39] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2024-05-24 22:52:39,856 - INFO - 127.0.0.1 - - [24/May/2024 22:52:39] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-05-24 22:52:39,857 - INFO - 127.0.0.1 - - [24/May/2024 22:52:39] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-05-24 22:52:39,894 - INFO - 127.0.0.1 - - [24/May/2024 22:52:39] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-24 22:52:39,912 - INFO - 127.0.0.1 - - [24/May/2024 22:52:39] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-24 22:54:42,171 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:54:42,220 - INFO -  * Restarting with stat
+2024-05-24 22:54:42,489 - WARNING -  * Debugger is active!
+2024-05-24 22:54:42,489 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:54:55,558 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:54:55,628 - INFO -  * Restarting with stat
+2024-05-24 22:54:55,969 - WARNING -  * Debugger is active!
+2024-05-24 22:54:55,971 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:55:21,090 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:55:21,151 - INFO -  * Restarting with stat
+2024-05-24 22:55:21,418 - WARNING -  * Debugger is active!
+2024-05-24 22:55:21,418 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:55:25,444 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:55:25,507 - INFO -  * Restarting with stat
+2024-05-24 22:55:25,787 - WARNING -  * Debugger is active!
+2024-05-24 22:55:25,789 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:55:28,815 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:55:28,848 - INFO -  * Restarting with stat
+2024-05-24 22:55:29,108 - WARNING -  * Debugger is active!
+2024-05-24 22:55:29,108 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:55:33,138 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:55:33,189 - INFO -  * Restarting with stat
+2024-05-24 22:55:33,535 - WARNING -  * Debugger is active!
+2024-05-24 22:55:33,536 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:55:42,588 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:55:42,688 - INFO -  * Restarting with stat
+2024-05-24 22:55:42,978 - WARNING -  * Debugger is active!
+2024-05-24 22:55:42,986 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:56:28,538 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-24 22:56:28,538 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-24 22:56:28,538 - INFO -  * Restarting with stat
+2024-05-24 22:56:28,789 - WARNING -  * Debugger is active!
+2024-05-24 22:56:28,789 - INFO -  * Debugger PIN: 166-627-896
+2024-05-24 22:56:39,805 - ERROR - Error saving timetable data to database: 1130 (HY000): Host 'YashLaptop' is not allowed to connect to this MySQL server
+2024-05-24 22:56:39,810 - INFO - 127.0.0.1 - - [24/May/2024 22:56:39] "POST / HTTP/1.1" 200 -
+2024-05-24 22:56:39,826 - INFO - 127.0.0.1 - - [24/May/2024 22:56:39] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:56:52,361 - INFO - 127.0.0.1 - - [24/May/2024 22:56:52] "GET / HTTP/1.1" 200 -
+2024-05-24 22:57:00,223 - ERROR - Error saving timetable data to database: 1130 (HY000): Host 'YashLaptop' is not allowed to connect to this MySQL server
+2024-05-24 22:57:00,224 - INFO - 127.0.0.1 - - [24/May/2024 22:57:00] "POST / HTTP/1.1" 200 -
+2024-05-24 22:57:00,251 - INFO - 127.0.0.1 - - [24/May/2024 22:57:00] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-05-24 22:57:49,181 - INFO -  * Detected change in 'C:\\timetable_generator\\app.py', reloading
+2024-05-24 22:57:49,285 - INFO -  * Restarting with stat

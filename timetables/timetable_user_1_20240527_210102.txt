@@ -1,0 +1,8 @@
+Username: Yash
+
+Activity    Start Time    End Time
+Chemistry   09:00 PM      09:30 PM
+Break       09:30 PM      09:38 PM
+Pw chem     09:38 PM      10:53 PM
+Break       10:53 PM      11:05 PM
+Pw phy      11:05 PM      12:20 AM

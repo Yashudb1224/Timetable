@@ -113,13 +113,28 @@
         .logout-button:hover {
             background-color: #c0392b; /* Darker red */
         }
-    </style> 
+        .assistant-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff; /* Blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .assistant-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="motivational-quote">
         <p>"It does not matter how slowly</p>
-        <p> you go as long as you dont stop"</p>
-        <p>~conficius</p>
+        <p> you go as long as you don't stop"</p>
+        <p>~Confucius</p>
     </div>
 
     <h1>Generated Timetable</h1>
@@ -147,6 +162,10 @@
 
     <!-- Logout Button -->
     <button class="logout-button" onclick="location.href='/logout'">Logout</button>
+
+    <!-- AI Assistant Button -->
+    <button class="assistant-button" onclick="window.open('/jarvis', '_blank')">Open AI Assistant</button>
+
 
     <!-- JavaScript to update Pomodoro timer -->
     <script>

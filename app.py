@@ -137,7 +137,9 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
+@app.route('/jarvis')
+def jarvis_index():
+    return render_template('jarvis.html')  # Route for Jarvis assistant
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-

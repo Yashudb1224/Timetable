@@ -1,0 +1,6 @@
+Username: Varun
+
+Activity          Start Time    End Time
+English           11:01 PM      01:01 AM
+Break             01:01 AM      01:12 AM
+Computer Science  01:12 AM      03:12 AM
